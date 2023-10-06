@@ -1,36 +1,14 @@
-const nemo = ["nemo"];
-const everyone = [
-  "dory",
-  "bruce",
-  "marlin",
-  "nemo",
-  "gill",
-  "bloat",
-  "nigel",
-  "squirt",
-  "darla",
-  "hank",
-];
-const large = new Array(100000).fill("nemo");
-function findNemo(array) {
-  let t0 = performance.now();
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === "nemo") {
-      console.log("Found NEMO!");
-    }
-  }
-  let t1 = performance.now();
-  console.log("Call to find Nemo took " + (t1 - t0) + " milliseconds");
-}
-findNemo(large);
+// Big O exercice
 
-function findNemo2(array) {
-  let t0 = performance.now();
-
-  if (array.includes("nemo2")) {
-    console.log("Found NEMO 2");
-  }
-  let t1 = performance.now();
-  console.log("Call to find Nemo 2 took " + (t1 - t0) + " milliseconds");
+// What is the Big O of the below function? (Hint, you may want to go line by line)
+function pairOfArrays(arr) {
+  arr.forEach((element) => { //O(n)
+    arr.forEach((el) => {
+      console.log(element, el); //O(n)
+    });
+  });
 }
-findNemo2(large); // O(n) Big ) depends on the number of input
+
+// O(n˘2))
+
+pairOfArrays([1, 2, 3, 4, 5]);
